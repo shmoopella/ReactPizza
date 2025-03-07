@@ -1,0 +1,82 @@
+.root {
+  //border: 2px solid black;
+  //width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  row-gap: 10px;
+
+}
+
+.wrap {
+  //border: 1px solid deeppink;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+
+
+  button {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: white;
+  }
+}
+
+.descriptionWrap {
+  //border: 1px solid #f0ad4e;
+  display: flex;
+  flex-wrap: wrap;
+
+  column-gap: 10px;
+  padding: 10px;
+}
+
+.descriptionBlock {
+  //border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 5px;
+
+  button {
+    margin: 0;
+  }
+}
+
+.priceBlock {
+  //border: 1px solid red;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 10px;
+
+  button {
+    margin: 0;
+  }
+}
+
+.pizzaImg {
+  width: 100px;
+}
+
+.deleteIcon {
+  width: 11px
+}
+
+.pizzaCount {
+  display: inline-block;
+  text-align: center;
+  border-bottom: 1px solid black;
+  width: 40px;
+}
+
+

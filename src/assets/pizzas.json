@@ -1,0 +1,123 @@
+[
+    {
+      "id": 0,
+      "imgUrl": "/img/pizzas/pepperoni_fresh.jpeg",
+      "title": "Пепперони Фреш с перцем",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": 803,
+      "category": 1,
+      "rating": 4
+    },
+    {
+      "id": 1,
+      "imgUrl": "/img/pizzas/cheese.jpeg",
+      "title": "Сырная",
+      "types": [0],
+      "sizes": [25, 35],
+      "price": 245,
+      "category": 2,
+      "rating": 6
+    },
+    {
+      "id": 2,
+      "imgUrl": "/img/pizzas/barbecue_chicken.jpeg",
+      "title": "Цыпленок барбекю",
+      "types": [0],
+      "sizes": [25, 35],
+      "price": 295,
+      "category": 1,
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "imgUrl": "/img/pizzas/ham_mushrooms.jpeg",
+      "title": "Ветчина и грибы",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": 519,
+      "category": 1,
+      "rating": 2
+    },
+    {
+      "id": 4,
+      "imgUrl": "/img/pizzas/pesto.jpeg",
+      "title": "Песто",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": 649,
+      "category": 1,
+      "rating": 8
+    },
+    {
+      "id": 5,
+      "imgUrl": "/img/pizzas/havaii.jpeg",
+      "title": "Гавайская",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": 539,
+      "category": 1,
+      "rating": 2
+    },
+    {
+      "id": 6,
+      "imgUrl": "/img/pizzas/pepperoni.jpeg",
+      "title": "Пепперони",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": 519,
+      "category": 1,
+      "rating": 9
+    },
+    {
+      "id": 7,
+      "imgUrl": "/img/pizzas/margarita.jpeg",
+      "title": "Маргарита",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": 450,
+      "category": 2,
+      "rating": 10
+    },
+    {
+      "id": 8,
+      "imgUrl": "/img/pizzas/four_seasons.jpeg",
+      "title": "Четыре сезона",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": 395,
+      "category": 1,
+      "rating": 10
+    },
+    {
+      "id": 9,
+      "imgUrl": "/img/pizzas/vegetables_mushrooms.jpeg",
+      "title": "Овощи и грибы",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": 285,
+      "category": 2,
+      "rating": 7
+    },
+  {
+    "id": 10,
+    "imgUrl": "/img/pizzas/diablo.jpeg",
+    "title": "Диабло",
+    "types": [0, 1],
+    "sizes": [25, 30, 35],
+    "price": 679,
+    "category": 3,
+    "rating": 6
+  },
+  {
+    "id": 11,
+    "imgUrl": "/img/pizzas/meet_with_adjika.jpeg",
+    "title": "Мясная с аджикой",
+    "types": [0, 1],
+    "sizes": [25, 30, 35],
+    "price": 549,
+    "category": 3,
+    "rating": 7
+  }
+]
+
