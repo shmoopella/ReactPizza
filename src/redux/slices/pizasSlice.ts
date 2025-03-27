@@ -1,19 +1,34 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+
+
 import axios from "axios";
 
-export const fetchPizza = createAsyncThunk(
+export const fetchPizza = createAsyncThunk<FetchedPizza[], string>(
   "pizza/fetch",
-  async (url, thunkAPI) => {
+  async (url: string) => {
     const { data } = await axios.get(url);
-    return data;
+    return data as FetchedPizza[];
   },
 );
 
-const initialState = {
+export interface FetchedPizza {
+    title: string,
+    price: number,
+    imgUrl: string,
+    sizes: number[],
+    types: number[],
+}
+
+interface InitialPizza {
+    items: FetchedPizza[],
+    status: "loading" | "error" | "success",
+}
+
+const initialState: InitialPizza = {
   items: [],
   status: "loading",
-  error: null,
 };
+
 
 export const pizzasSlice = createSlice({
   name: "pizza",

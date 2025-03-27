@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Link } from "react-router";
 
 import { useSelector } from "react-redux";
@@ -7,9 +5,11 @@ import { useSelector } from "react-redux";
 import Search from "./Search/Search";
 import logo from "../assets/img/pizza-logo.svg";
 
+import {RootState} from "../redux/store";
+
 function Header() {
-  const orderCost = useSelector((state) => state.cart.orderCost);
-  const pizzasCount = useSelector((state) => state.cart.totalPizzasCount);
+  const orderCost = useSelector((state: RootState) => state.cart.orderCost);
+  const pizzasCount = useSelector((state: RootState) => state.cart.totalPizzasCount);
   return (
     <div className="header">
       <div className="container">

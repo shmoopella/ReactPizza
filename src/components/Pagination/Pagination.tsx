@@ -1,9 +1,8 @@
-import React from "react";
 import ReactPaginate from "react-paginate";
 
 import styles from "./Pagination.module.scss";
 
-function Pagination({ pageCount, handlePageClick }) {
+function Pagination({ pageCount, handlePageClick }:{pageCount:number; handlePageClick:(page: number)=>void}) {
   return (
     <ReactPaginate
       className={styles.root}

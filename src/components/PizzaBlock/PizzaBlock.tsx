@@ -1,13 +1,19 @@
 import React from "react";
+
+import {RootState} from "../../redux/store.ts";
+
 import { useDispatch, useSelector } from "react-redux";
 import { addPizza } from "../../redux/slices/cartSlice";
-function PizzaBlock({ title, price, imgUrl, sizes, types }) {
+
+
+function PizzaBlock({ title, price, imgUrl, sizes, types }: { title: string, price: number, imgUrl: string, sizes: number[], types: number[] }) {
   const [activeSize, setActiveSize] = React.useState(0);
   const [activeType, setActiveType] = React.useState(types[0]);
-  const dispatch = useDispatch();
 
-  const cartItems = useSelector((state) => state.cart.value);
-  let pizzaCount =
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state:RootState) => state.cart.value);
+
+  let pizzaCount: number =
     cartItems.find(
       (pizza) =>
         pizza.title === title &&
@@ -44,7 +50,7 @@ function PizzaBlock({ title, price, imgUrl, sizes, types }) {
           ))}
         </ul>
         <ul>
-          {sizes.map((size, index) => (
+          {sizes.map((size: number, index: number) => (
             <li
               onClick={() => setActiveSize(index)}
               key={index}

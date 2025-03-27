@@ -1,8 +1,7 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import { category } from "../redux/slices/filterSlice";
 
-function Categories({ activeCategory }) {
+function Categories({ activeCategory }: { activeCategory: number }) {
   const categories = ["Все", "Мясные", "Вегетарианские", "Острые"];
   const dispatch = useDispatch();
   return (

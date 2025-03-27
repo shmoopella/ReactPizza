@@ -1,6 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+
+interface InitialCart {
+    value: OrderPizza[],
+    orderCost: number,
+    totalPizzasCount: number,
+}
+
+export interface OrderPizza {
+    title: string;
+    url: string;
+    price: number;
+    count: number;
+    size: number;
+    type: number;
+}
+
+const initialState: InitialCart = {
   value: [],
   orderCost: 0,
   totalPizzasCount: 0,
@@ -58,6 +74,5 @@ export const {
   deletePizza,
   decrementPizza,
   cleanCart,
-  confirmReset,
 } = cartSlice.actions;
 export default cartSlice.reducer;

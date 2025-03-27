@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import {RootState} from "../../redux/store.ts";
 
 import Order from "../../components/Cart/Order";
 import Check from "../../components/Cart/Check";
@@ -9,7 +10,7 @@ import styles from "./Cart.module.scss";
 
 function Cart() {
   const [showConfirm, setShowConfirm] = React.useState(false);
-  const order = useSelector((state) => state.cart.value);
+  const order = useSelector((state: RootState) => state.cart.value);
   const handleCleanClick = () => {
     setShowConfirm(true);
   };

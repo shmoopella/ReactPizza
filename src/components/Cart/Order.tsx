@@ -1,24 +1,23 @@
-import React from "react";
-
 import { useDispatch } from "react-redux";
 import {
   addPizza,
   deletePizza,
   decrementPizza,
-} from "../../redux/slices/cartSlice";
+} from "../../redux/slices/cartSlice.js";
+import {OrderPizza} from "../../redux/slices/cartSlice.js";
 
 import styles from "./Order.module.scss";
 import deleteIcon from "../../assets/img/close_icon.svg";
 
-function Order({ order }) {
+function Order({ order }:{ order: OrderPizza[]}) {
   const dispatch = useDispatch();
-  const countIncrementClick = (title, type, size, price) => {
+  const countIncrementClick = (title: string, type: number, size: number, price: number) => {
     dispatch(addPizza({ title, type, size, price }));
   };
-  const countDecrementClick = (title, type, size, price) => {
+  const countDecrementClick = (title: string, type: number, size: number, price: number) => {
     dispatch(decrementPizza({ title, type, size, price }));
   };
-  const deletePizzaClick = (title, size, type, count, price) => {
+  const deletePizzaClick = (title: string, size: number, type: number, count: number, price: number) => {
     dispatch(deletePizza({ title, size, type, count, price }));
   };
   return (

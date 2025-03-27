@@ -1,9 +1,8 @@
-import React from "react";
 import { useDispatch } from "react-redux";
-import { cleanCart } from "../../redux/slices/cartSlice";
+import { cleanCart } from "../../redux/slices/cartSlice.js";
 
 import styles from "./CustomConfirm.module.scss";
-function CustomConfirm({ isShow, setShowConfirm }) {
+function CustomConfirm({ isShow, setShowConfirm } : {isShow: boolean; setShowConfirm : (value: boolean) => void}) {
   const dispatch = useDispatch();
   const onYesButtonClick = () => {
     dispatch(cleanCart());

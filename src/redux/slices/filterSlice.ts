@@ -1,6 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+export interface SortValue {
+    name: string;
+    type: string;
+    order: string
+}
+interface Initial {
+    categoryValue: number;
+    sortValue: SortValue;
+    searchValue: string;
+    currentPage: number
+}
+
+const initialState: Initial = {
   categoryValue: 0,
   sortValue: {
     name: "популярности",

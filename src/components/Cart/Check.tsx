@@ -1,9 +1,12 @@
 import styles from "./Check.module.scss";
 import { useSelector } from "react-redux";
+import {RootState} from "../../redux/store.ts";
+import {OrderPizza} from "../../redux/slices/cartSlice.ts";
 
-function Check({ order }) {
-  const orderCost = useSelector((state) => state.cart.orderCost);
-  const pizzasCount = useSelector((state) => state.cart.totalPizzasCount);
+
+function Check({ order }: {order: OrderPizza[]}) {
+    const orderCost = useSelector((state: RootState) => state.cart.orderCost);
+  const pizzasCount = useSelector((state: RootState) => state.cart.totalPizzasCount);
   return (
     <div className={styles.root}>
       <p>ВАШ ЧЕК</p>
@@ -16,7 +19,7 @@ function Check({ order }) {
           </tr>
         </thead>
         <tbody>
-          {order.map((pizza, index) => {
+          {order.map((pizza: OrderPizza, index: number) => {
             return (
               <tr key={index}>
                 <td>{pizza.title}</td>

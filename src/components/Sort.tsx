@@ -1,11 +1,12 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { sort } from "../redux/slices/filterSlice";
+import { sort, SortValue } from "../redux/slices/filterSlice";
 
-function Sort({ selectedSort }) {
+
+function Sort({ selectedSort }: {selectedSort: SortValue}) {
   const dispatch = useDispatch();
   const [isVisible, setIsVisible] = React.useState(false);
-  const sortRef = React.useRef();
+  const sortRef = React.useRef(null);
 
   const popupItems = [
     { name: "популярности", type: "rating", order: "desc" },
@@ -14,13 +15,13 @@ function Sort({ selectedSort }) {
     { name: "алфавиту (А-Я)", type: "title", order: "asc" },
     { name: "алфавиту (Я-А)", type: "title", order: "desc" },
   ];
-  const onSortClick = (value) => {
+  const onSortClick = (value:SortValue) => {
     dispatch(sort(value));
     setIsVisible(false);
   };
 
   React.useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event:any) => {
       if (!event.composedPath().includes(sortRef.current)) {
         setIsVisible(false);
       }

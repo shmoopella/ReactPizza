@@ -1,4 +1,4 @@
-import React from "react";
+import React, {RefObject} from "react";
 
 import debounce from "lodash.debounce";
 
@@ -10,15 +10,15 @@ import closeIcon from "../../assets/img/close_icon.svg";
 function Search() {
   const [inputSearch, setInputSearch] = React.useState("");
   const dispatch = useDispatch();
-  const inputRef = React.useRef();
+  const inputRef:RefObject<any> = React.useRef(null);
 
   const updateSearchReq = React.useCallback(
-    debounce((str) => {
+    debounce((str:string) => {
       dispatch(search(str));
     }, 500),
     [],
   );
-  const onChangeInput = (value) => {
+  const onChangeInput = (value:string) => {
     setInputSearch(value);
     updateSearchReq(value);
   };
